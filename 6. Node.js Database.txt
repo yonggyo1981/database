@@ -1,0 +1,22 @@
+0. DBMS 설치(MySQL)
+   - mysql
+   
+   mysql.com 
+   
+root 비번
+aA!12345
+
+환경변수
+	MYSQL 실행 경로
+	C:\Program Files\MySQL\MySQL Server 8.0\bin
+	
+	MYSQL 접속 
+	mysql u계정이름 -p 
+	
+1. Sequelize 
+설치 패키지(모듈)
+ sequelize  
+ sequelize-cli - 명령어
+ mysql2  - squelize와 DBMS(MySQL) 연동을 하는 드라이버
+ 
+ npm i sequelize sequelize-cli mysql2
