@@ -90,3 +90,23 @@ CREATE TABLE member (
     memNm VARCHAR(20) NOT NULL,
     PRIMARY KEY(memNo)
 );
+
+8. 테이블 비우기 
+TRUNCATE 테이블명;
+
+8. 암호화 해시 bcrypt
+npm i bcrypt 
+
+.sync 
+.query
+
+sequelize 인스턴스
+			.query(sql, {
+				replacements : 바인딩될 데이터,
+				type : QueryTypes.SELECT | INSERT | UPDATE | DELETE
+			});
+			
+npm i sequelize sequelize-cli mysql2
+npx sequelize init 
+config/config.json
+models/index.js
