@@ -62,3 +62,11 @@
  app.get("/", function(req, res, next) {
 	res.send("출력 완료!");
  });
+
+
+
+개발중 -> 3000, 3001
+
+서비스 중 - 80(http), 443(https)
+
+4. 필수 모듈(패키지) 
