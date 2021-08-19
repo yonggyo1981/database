@@ -70,3 +70,76 @@
 서비스 중 - 80(http), 443(https)
 
 4. 필수 모듈(패키지) 
+
+
+
+미들웨어 이동 -> 매칭이되는 해당하는 라우터 안에서만 이동
+
+라우터가 다르면 미들웨어가 서로 다르다
+
+app.
+	.get()
+	
+	.post()
+	.delete()
+	.put()
+	.patch()
+	
+
+app.use("/test", (req, res, next) => {})
+	(get, post, delete, put, patch.. 모든 메소드에 매칭되는 /test')
+	
+	
+app.use((req, res, next) => {
+	// 공통 미들웨어 
+});
+(모든 메서드 + 모든 요청 URL)
+
+
+app.use(morgan('dev'));
+
+app.use(cookieParser());
+app.use(session());
+
+app.use("/member", 라우터) 
+ // 라우터 - 모든 메서드, /member 하에서만 공통 미들웨어
+ 
+ app.get("경로", 미들워어1, 미들웨어2, 미들웨어3 ...) 
+
+
+미들웨어 함수
+function (req, res, next) {
+
+}
+
+req - request 객체
+res - response 객체
+next - 함수(다음 미들웨어로 이동하는 함수)
+
+요청 방식에대한 부분
+GET, - 브라우저 주소창에 노출되는 형태
+POST  - 내부적으로 처리되는 형태(Request Header 
+
+
+
+app.get("키")  -> app.set으로 설정된 값을 가져오는 메서드
+app.set("키", "값"); -> app 전체에 공유되는 변수를 지정하는 메서드
+
+app.set('PORT', process.env.PORT || 3000);
+
+
+process.env  -> 설정과 관련된 속성(환경변수)
+
+.env -> dotenv.config();
+
+cross-env PORT=123
+
+
+자바스크립트 - 논리연산자(||, &&) -> 비교 결과를 논리값 X, 조건에 해당이되는 값
+
+
+10. 라우터 
+메인페이지 라우터 - index.js
+게시판 라우터 - board.js 
+
+
