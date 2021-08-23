@@ -143,3 +143,15 @@ cross-env PORT=123
 게시판 라우터 - board.js 
 
 
+Request 입력 데이터
+GET 쿼리스트링 방식의 데이터 키=값&키=값 
+  req.query 
+ 
+GET URL 인수 형태 /:id 
+	req.params
+	
+POST 방식의 데이터 
+	req.body
+
+
+
