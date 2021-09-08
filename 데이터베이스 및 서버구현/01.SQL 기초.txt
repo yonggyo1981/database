@@ -251,5 +251,34 @@ DROP DATABASE 데이터베이스명;
 custid -> NewCustomer.custid -> 연쇄 삭제(ON DELETE CASCADE)
 
 
+ALTER 문 
+테이블 속성 변경 
+ALTER TABLE 테이블
+		[ADD 속성이름 데이터 타입 제약조건] - 속성 추가 
+		[DROP COLUMN 속성 이름] - 속성 제거
+		[ALTER COLUMN 속성이름 데이터타입 제약조건] - 속성변경
+		[MODIFY [COLUMN] 속성이름 데이터타입 제약조건] - 속성변경
+		[CHANGE COLUMN 기존 속성명  새로운 속성명 데이터타입 제약조건] - 속성명 변경
+		[ADD PRIMIARY KEY(속성이름)] - 기본키 지정
+		[ADD FOREIGN KEY(속성이름) REFERENCES 테이블명(속성명) ...]
+		[ADD | DROP] 제약이름 - CHECK, INDEX, PRIMARY, FOREIGN KEY
 
+P187 
+		AFTER - 속성 바로 뒤에, FIRST -> 가장 첫번째
+3-37. NewBook 테이블 
+			- isbn 속성을 추가(VARCHAR(13))
 
+3-38 NewBook 테이블 
+			- isbn -> INTEGER
+			MODIFY COLUMN
+			ALTER COULMN
+3-39 NewBook 테이블 
+			- isbn 속성 삭제
+
+3-40 bookid AUTO_INCREMENT 			
+3-41 NewBook 테이블 bookid 속성 -> 기본키
+
+3-42  NewBook 테이블 삭제 
+	DROP TAbLE 테이블 명
+
+3-43 -> NewCustomer 
