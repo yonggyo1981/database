@@ -1,0 +1,61 @@
+내장함수, 사용자 정의함수(Stored Program  - 프로시저, 트리거, 사용자 정의 함수)
+
+1. 내장 함수 
+	1) 숫자함수  
+		ABS(숫자)  - 절대값
+		CEIL(숫자) - 올림 
+		FLOOR(숫자) - 버림
+		ROUND(숫자,m) - 반올림 
+		LOG(n, 숫자) - 
+		POWER(숫자, n) - 제곱
+		SQRT(숫자) - 제곱근
+		SIGN(숫자) - 양수(1), 음수(-1), 0 
+		
+	2) 문자함수	- 215
+		s - 문자, c - 정수, k - 정수
+		CONCAT(s1, s2) - 문자열 결합
+		LOWER(s)  - 대문자 -> 소문자
+		LPAD(s,n,c) 
+		REPLACE(s1, s2, s3) - 문자열 치환 
+		RPAD(s,n,c)
+		SUBSTR(s,n,k) - n - 시작점(1부터 시작), k - 갯수
+		TRIM(c FROM s) 
+		UPPER(s) - 소문자 -> 대문자
+		
+		
+		ASCII(c) -> 문자의 아스키코드 'A' -> 65
+		LENGTH(s) -> 문자열의 길이(1byte씩 길이 산출)
+					      영문자, 숫자 -> 1byte 
+						  한글(UTF-8) -> 1자 -> 3byte
+						        EUC-KR -> 2자 -> 2byte 
+								
+		CHAR_LENGTH(s) -> 문자열의 길이(문자 단위로 길이 산축)
+		
+		
+	3) 날짜,시간함수 - 218
+		STR_TO_DATE(string, format) - 문자열 날짜 -> DATE 형 날짜
+		DATE_FORMAT(date, format) 
+			- DATE 형 날짜 -> 문자열 날짜 
+		
+		ADDDATE(date, interval) 
+			날짜에 지정된 기간만큼 더하거나 뺄때 
+			INTERVAL 10 DAY -> date 보다 10일 뒤
+			INTERVAL -10 DAY -> date 보다 10일 앞 
+			
+		DATE(date)  -> DATETIME(날짜 시간) -> DATE(날짜)
+		
+		DATEDIFF(date1, date2) -> date1, date2의 날짜 간격
+			
+		SYSDATE -> DBMS 시스템 현재 시간
+		NOW
+		
+		format 주요 지정자 - P219
+		
+		NULL 값 처리 - P221
+		
+		행번호 출력 - P223
+
+2. 부속질의
+	1) 스칼라 부속질의 - SELECT 절 
+	2) 인라인뷰 - FROM 절 
+	3) 중첩질의 - WHERE 절 
