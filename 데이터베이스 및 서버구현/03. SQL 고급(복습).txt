@@ -89,9 +89,116 @@
 			  COUNT() -> 0
 	
 	
-	P223 
 	IFNULL
 	
 	변수 
 	SET @변수명:=값;
 	
+	
+	부속질의 
+	- 하나의 SQL문 안에 다른 SQL 문이 중첩된 질의
+	1) 스칼라 부속질의
+				SELECT ........., UPDATE SET .... 
+				스칼라 = 단일값 
+				
+	2) 인라인 뷰 
+			FROM ....  -> 가상의 뷰
+			
+	3) 중첩질의
+		WHERE 조건에 - 상관 부속질의 
+					          비상관 부속질의
+							  
+							  단일 -> 비교조건
+							  =, >, < 
+							  
+							  복수 -> 집합 연산(IN, NOT IN)
+							  
+	P226 
+	스칼라 부속질의 - SELECT 속성... , UPDATE SET ... 
+	4-21. 고객별 판매액(+고객이름)
+			GROUP BY custid 
+	
+	P228
+			UPDATE SET 
+			
+	인라인뷰 - FROM 부속질의 (가상의 뷰)
+	P229
+	4-14
+	고객번호가 2 이하인 고객의 판매액(고객이름 + 고객별 판매액)
+	
+	P230 
+	중첩질의 - WHERE 부속질의
+	표4-7 
+	비교 -> 단일값 
+	한정 -> ALL(최대값), SOME(ANY)(최소값)
+	
+	P231 - 4-15 
+	평균 주문금액 이하의 주문에 대해서(주문번호, 금액)
+	
+	P232
+	IN(교집합), NOT IN(차집합)
+	4-17
+	(대한민국에 거주하는 고객)에 판매한 도서의 총판매액	
+		Customer                             Orders
+		
+		
+	ALL -> 최대값 
+	SOME(ANY) -> 최소값
+	
+	P233 - 4-18
+	3번 고객이 주문한 도서의 최고 금액보다 더 비싼 도서를 구입한 
+	주문(주문번호 + 판매액)
+	
+	EXISTS, NOT EXISTS 
+	4-19. EXISTS  연산자를 사용 
+		대한민국에 거주하는 고객에게 판매한 도서의 총 판매액을 구하시오
+		
+	
+	
+	뷰 -> 가상 테이블
+			(물리적 데이터, DBMS -> SQL 질의문 -> 결과)
+		
+	뷰의 생성
+	CREATE VIEW 뷰 이름
+	AS SELECT 문
+	P238 
+	4-20
+	주소에 '대한민국'을 포함하는 고객들로 구성된 뷰
+	(vw_Customer)
+		
+	P239 뷰의 수정
+	4-22 영국에 거주하는 고객
+	CREATE OR REPLACE VIEW 뷰이름 
+	AS SELECT 문 
+	
+	4-21 
+	orderid, bookname, saleprice, name 
+	Orders    Book                     Customer 
+	
+	vw_Orders
+	
+	DROP VIEW 뷰이름;
+	
+	P240 -> vw_Customer
+	
+	
+	INFORMATION_SCHEMA -> DBMS의 전반적인 정보
+	
+	인덱스
+	  목차, 색인
+	  
+	  데이터 + 인덱스 -> BTREE -> 이진트리
+	  클러스터 인덱스 
+		- 기본키(PK)
+		- UNIQUE 
+		- MySQL 자체 생성 row_id 
+		
+	  보조인덱스
+		클러스터 인덱스가 아닌 인덱스
+		
+		보조인덱스 -> 클러스터 인덱스의 키 -> 레코드 검색
+		
+		
+		
+		CREATE INDEX 인덱스 명 ON 테이블명(속성, ... 속성)
+		
