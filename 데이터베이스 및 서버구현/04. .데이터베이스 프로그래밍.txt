@@ -54,5 +54,7 @@ SQL 실행 전, 후
 3. 사용자 정의 함수
 
 
-JAVA SQL 공부시 참고
+JAVA SQL 공부시 참고(16장)
 http://yonggyo.com:60000/yonggyo/lecture/-/tree/master/10.JSP
+
+
