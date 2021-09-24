@@ -52,3 +52,7 @@ P270 -> 숫자 투입 하면 -> 0 부터 증감 -> 인수보다 커질때까지 
 SQL 실행 전, 후
 
 3. 사용자 정의 함수
+
+
+JAVA SQL 공부시 참고
+http://yonggyo.com:60000/yonggyo/lecture/-/tree/master/10.JSP
